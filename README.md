@@ -58,3 +58,27 @@ You can see it in action in this picture:
 
 ![kép](https://github.com/user-attachments/assets/ad091682-fd7d-4c2c-ab9e-66ad8dd414af)
 
+## 2nd case
+
+In this case we make an IMG file from BIN and run the bootloader in floopy mode (-fda)
+
+### 1) Same as before.
+
+### 2) Same as before.
+
+### 3) make the IMG file from BIN (*.bin -> *.img)
+
+```
+dd if=boot-01.bin of=boot-01.img bs=512 count=1
+```
+
+### 4) run this *.img file in QEMY in "floppy" mode
+
+```
+qemu-system-i368 -fda boot-01.img
+```
+
+The output picture is same as before.
+
+
+
