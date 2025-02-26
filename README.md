@@ -3,6 +3,8 @@ Simplest ways to make bootloader.
 
 ## 1st case
 
+In this case we make a BIN file from ASM and run the bootloader in raw mode.
+
 ### 1) make an bootloader in Assembly
 
 ```asm
