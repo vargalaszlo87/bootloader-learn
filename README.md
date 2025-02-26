@@ -3,7 +3,7 @@ Simplest ways to make bootloader.
 
 ## 1st case
 
-**1) make an bootloader in Assembly**
+### 1) make an bootloader in Assembly
 
 ```asm
 
@@ -38,13 +38,21 @@ msg db 'Hello World!', 0
 
 times 510-($-$$) db 0
 dw 0xAA55
-
 ```
 
-**2) compile this file with NASM (*.asm -> *.bin)**
+### 2) compile this file with NASM (*.asm -> *.bin)
 
 ```
 nasm -f bin boot-01.asm -b boot-01.bin
 ```
 
-- run this *.bin file in QEMY with raw mode
+### 3) run this *.bin file in QEMY with raw mode
+
+```
+qemu-system-i368 -drive format=raw,file=boot-01.bin
+```
+
+You can see it in action in this picture:
+
+![kép](https://github.com/user-attachments/assets/ad091682-fd7d-4c2c-ab9e-66ad8dd414af)
+
